@@ -35,7 +35,7 @@ public class LoginPage {
 		return this;
 	}
 
-	public HomePage signin() {
+	public HomePage signIn() {
 		signin.click();
 		return new HomePage(driver);
 	}
@@ -44,7 +44,7 @@ public class LoginPage {
 		return dashboard.isDisplayed();
 	}
 
-	public boolean alert() {
+	public boolean isAlertDisplayed() {
 		return alert.isDisplayed();
 	}
 }

@@ -6,6 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import utilities.PageUtility;
+import utilities.WaitUtility;
 
 public class ManageContactPage {
 	WebDriver driver;
@@ -34,6 +35,8 @@ public class ManageContactPage {
 	private WebElement alertmessage;
 
 	public ManageContactPage update() {
+		WaitUtility waitutility = new WaitUtility();
+		waitutility.waitForElement(driver, updatebutton);
 		updatebutton.click();
 		return this;
 	}
@@ -70,7 +73,9 @@ public class ManageContactPage {
 		return this;
 	}
 
-	public boolean alert() {
+	public boolean isAlertDisplayed() {
+		WaitUtility waitutility = new WaitUtility();
+		waitutility.waitForAlertToBeVisible(driver);
 		return alertmessage.isDisplayed();
 	}
 }

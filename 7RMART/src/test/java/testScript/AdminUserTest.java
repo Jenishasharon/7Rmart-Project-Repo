@@ -22,13 +22,13 @@ public class AdminUserTest extends Base {
 		String passwordvalue = ExcelUtility.getStringData(1, 1, "LoginPage");
 		LoginPage loginpage = new LoginPage(driver);
 		loginpage.enterUserName(usernamevalue).enterPassword(passwordvalue);
-		homepage = loginpage.signin();
+		homepage = loginpage.signIn();
 		String username = ExcelUtility.getStringData(1, 0, "AdminUser");
 		String password = ExcelUtility.getStringData(1, 1, "AdminUser");
 		String usertype = ExcelUtility.getStringData(1, 2, "AdminUser");
 		adminuserpage = homepage.adminMoreInfo1();
 		adminuserpage.create().username(username).password(password).userType(usertype).submit();
-		Boolean isAlertDisplayed = adminuserpage.alert();
+		Boolean isAlertDisplayed = adminuserpage.isAlertDisplayed();
 		Assert.assertTrue(isAlertDisplayed, Constants.CREATENEWUSER);
 
 	}

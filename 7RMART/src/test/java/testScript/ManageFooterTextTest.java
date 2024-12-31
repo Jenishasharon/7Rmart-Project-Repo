@@ -23,8 +23,7 @@ public class ManageFooterTextTest extends Base {
 		String passwordvalue = ExcelUtility.getStringData(1, 1, "LoginPage");
 		LoginPage loginpage = new LoginPage(driver);
 		loginpage.enterUserName(usernamevalue).enterPassword(passwordvalue);
-		homepage = loginpage.signin();
-		//String addressvalue = ExcelUtility.getStringData(1, 0, "FooterText");
+		homepage = loginpage.signIn();
 		String emailvalue = ExcelUtility.getStringData(1, 1, "FooterText");
 		String phonenum = ExcelUtility.getIntegerData(1, 2, "FooterText");
 		managefootertextpage = homepage.footerMoreInfo();
@@ -40,7 +39,7 @@ public class ManageFooterTextTest extends Base {
 		String passwordvalue = ExcelUtility.getStringData(1, 1, "LoginPage");
 		LoginPage loginpage = new LoginPage(driver);
 		loginpage.enterUserName(usernamevalue).enterPassword(passwordvalue);
-		homepage = loginpage.signin();
+		homepage = loginpage.signIn();
 		managefootertextpage = homepage.footerMoreInfo();
 		managefootertextpage.updateVisible();
 		boolean isActionButtonPresent = managefootertextpage.isAlertDisplayed();

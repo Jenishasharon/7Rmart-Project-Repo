@@ -1,9 +1,9 @@
 package constants;
 
 public class Constants {
-	public static final String TESTDATAFILE = System.getProperty("user.dir") + "\\src\\main\\resources\\Testdata.xlsx";
+	public static final String TESTDATAFILE = System.getProperty("user.dir") + "\\src\\test\\resources\\Testdata.xlsx";
 	public static final String KIDSHAIRCLIPS = System.getProperty("user.dir")
-			+ "\\src\\main\\resources\\kids_hairclips.jpg";
+			+ "\\src\\test\\resources\\kids_hairclips.jpg";
 	public static final String LOGINWITHVALIDCREDENTIALS = "User is unable to login with valid credentials";
 	public static final String LOGINWITHINVALIDUSERNAME = "User is able to login with invalid username";
 	public static final String LOGINWITHINVALIDPASSWORD = "User is able to login with invalid password";
@@ -20,3 +20,4 @@ public class Constants {
 	public static final String CONFIGFILE = System.getProperty("user.dir")
 			+ "\\src\\main\\resources\\config.properties";
 }
+

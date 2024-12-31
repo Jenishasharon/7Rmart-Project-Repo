@@ -22,7 +22,7 @@ public class ManageNewsTest extends Base {
 		String msg = ExcelUtility.getStringData(1, 0, "ManageNews");
 		LoginPage loginpage = new LoginPage(driver);
 		loginpage.enterUserName(usernamevalue).enterPassword(passwordvalue);
-		homepage = loginpage.signin();
+		homepage = loginpage.signIn();
 		managenewspage = homepage.manage();
 		managenewspage.createNews().message(msg).saveMessage();
 		Boolean isNewsCreated = managenewspage.alert();

@@ -22,14 +22,14 @@ public class ManageProductTest extends Base {
 		String passwordvalue = ExcelUtility.getStringData(1, 1, "LoginPage");
 		LoginPage loginpage = new LoginPage(driver);
 		loginpage.enterUserName(usernamevalue).enterPassword(passwordvalue);
-		homepage = loginpage.signin();
+		homepage = loginpage.signIn();
 		String titlevalue = ExcelUtility.getStringData(1, 0, "ManageProduct");
 		String weightvalue = ExcelUtility.getIntegerData(1, 1, "ManageProduct");
 		String pricevalue = ExcelUtility.getIntegerData(1, 2, "ManageProduct");
+		String expectedalerttext =ExcelUtility.getStringData(1,3, "ManageProduct"); ;
 		manageproductpage = homepage.productMoreInfo();
 		manageproductpage.create().productTitle(titlevalue).weight(weightvalue).price(pricevalue).submit();
 		String actualalerttext = manageproductpage.getAlertText();
-		String expectedalerttext = "Please enter stock count";
 		Assert.assertEquals(actualalerttext, expectedalerttext, Constants.CREATEPRODUCT);
 	}
 }

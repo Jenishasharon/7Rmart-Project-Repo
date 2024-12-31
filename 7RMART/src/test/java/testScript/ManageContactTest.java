@@ -21,7 +21,7 @@ public class ManageContactTest extends Base {
 		String passwordvalue = ExcelUtility.getStringData(1, 1, "LoginPage");
 		LoginPage loginpage = new LoginPage(driver);
 		loginpage.enterUserName(usernamevalue).enterPassword(passwordvalue);
-		homepage = loginpage.signin();
+		homepage = loginpage.signIn();
 		String phonenumber = ExcelUtility.getIntegerData(1, 0, "ManageContact");
 		String emailvalue = ExcelUtility.getStringData(1, 1, "ManageContact");
 		String addressvalue = ExcelUtility.getStringData(1, 2, "ManageContact");
@@ -30,7 +30,7 @@ public class ManageContactTest extends Base {
 		managecontactpage = homepage.contactMoreInfo();
 		managecontactpage.update().phone(phonenumber).emailText(emailvalue).address(addressvalue)
 				.deliveryTime(delivtime).chargeLimit(delivcharge).submit();
-		boolean isAlertDisplayed = managecontactpage.alert();
+		boolean isAlertDisplayed = managecontactpage.isAlertDisplayed();
 		Assert.assertTrue(isAlertDisplayed, Constants.UPDATECONTACT);
 	}
 }

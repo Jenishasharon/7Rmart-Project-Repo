@@ -66,7 +66,7 @@ public class SubCategoryPage {
 		return this;
 	}
 
-	public boolean alert() {
+	public boolean isAlertDisplayed() {
 		return alert.isDisplayed();
 	}
 
@@ -75,8 +75,8 @@ public class SubCategoryPage {
 		driver.switchTo().alert().accept();
 		return this;
 	}
-	public boolean isAlertDelete()
-	{
+
+	public boolean isAlertDelete() {
 		return deleteAlert.isDisplayed();
 	}
 }
