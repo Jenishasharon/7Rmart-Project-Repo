@@ -28,7 +28,7 @@ public class ManageNewsPage {
 		return this;
 	}
 
-	public ManageNewsPage message(String newmessage) {
+	public ManageNewsPage enterMessage(String newmessage) {
 		information.sendKeys(newmessage);
 		return this;
 	}
@@ -38,7 +38,7 @@ public class ManageNewsPage {
 		return this;
 	}
 
-	public boolean alert() {
+	public boolean isAlertDisplayed() {
 		return alert.isDisplayed();
 	}
 }

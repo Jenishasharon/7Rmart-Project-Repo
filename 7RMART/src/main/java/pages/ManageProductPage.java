@@ -29,7 +29,7 @@ public class ManageProductPage {
 	@FindBy(xpath = "//button[@type='submit']")
 	private WebElement savebutton;
 
-	public ManageProductPage create() {
+	public ManageProductPage createNewProduct() {
 		newbutton.click();
 		return this;
 	}
@@ -39,28 +39,28 @@ public class ManageProductPage {
 		return this;
 	}
 
-	public ManageProductPage radio() {
+	public ManageProductPage productType() {
 		typeradiobutton.click();
 		return this;
 	}
 
-	public ManageProductPage weight(String weightvalue) {
+	public ManageProductPage productWeight(String weightvalue) {
 		weightfield.sendKeys(weightvalue);
 		return this;
 	}
 
-	public ManageProductPage price(String pricevalue) {
+	public ManageProductPage productPrice(String pricevalue) {
 		pricefield.sendKeys(pricevalue);
 		return this;
 	}
 
-	public void submit() {
+	public void clickSubmitButton() {
 		PageUtility pageutility = new PageUtility();
 		pageutility.jsExecuterClick(savebutton, driver);
 		// savebutton.click();
 	}
 
-	public String getAlertText() {
+	public String isGetAlertText() {
 		return PageUtility.getTextFromAlert(driver);
 	}
 }

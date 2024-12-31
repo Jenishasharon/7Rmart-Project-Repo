@@ -28,8 +28,8 @@ public class ManageContactTest extends Base {
 		String delivtime = ExcelUtility.getIntegerData(1, 3, "ManageContact");
 		String delivcharge = ExcelUtility.getIntegerData(1, 4, "ManageContact");
 		managecontactpage = homepage.contactMoreInfo();
-		managecontactpage.update().phone(phonenumber).emailText(emailvalue).address(addressvalue)
-				.deliveryTime(delivtime).chargeLimit(delivcharge).submit();
+		managecontactpage.updateContact().enterPhoneNumber(phonenumber).enterEmailText(emailvalue).enterAddress(addressvalue)
+				.enterDeliveryTime(delivtime).enterChargeLimit(delivcharge).clickSubmitButton();
 		boolean isAlertDisplayed = managecontactpage.isAlertDisplayed();
 		Assert.assertTrue(isAlertDisplayed, Constants.UPDATECONTACT);
 	}

@@ -34,39 +34,39 @@ public class ManageContactPage {
 	@FindBy(xpath = "//div[@class='alert alert-success alert-dismissible']")
 	private WebElement alertmessage;
 
-	public ManageContactPage update() {
+	public ManageContactPage updateContact() {
 		WaitUtility waitutility = new WaitUtility();
 		waitutility.waitForElement(driver, updatebutton);
 		updatebutton.click();
 		return this;
 	}
 
-	public ManageContactPage phone(String num) {
+	public ManageContactPage enterPhoneNumber(String num) {
 		phonefield.sendKeys(num);
 		return this;
 	}
 
-	public ManageContactPage emailText(String email) {
+	public ManageContactPage enterEmailText(String email) {
 		emailfield.sendKeys(email);
 		return this;
 	}
 
-	public ManageContactPage address(String adrs) {
+	public ManageContactPage enterAddress(String adrs) {
 		addressfield.sendKeys(adrs);
 		return this;
 	}
 
-	public ManageContactPage deliveryTime(String time) {
+	public ManageContactPage enterDeliveryTime(String time) {
 		deliverytimefield.sendKeys(time);
 		return this;
 	}
 
-	public ManageContactPage chargeLimit(String charge) {
+	public ManageContactPage enterChargeLimit(String charge) {
 		chargelimitfield.sendKeys(charge);
 		return this;
 	}
 
-	public ManageContactPage submit() {
+	public ManageContactPage clickSubmitButton() {
 		// savebutton.click();
 		PageUtility pageutility = new PageUtility();
 		pageutility.jsExecuterClick(savebutton, driver);

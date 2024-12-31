@@ -61,7 +61,7 @@ public class SubCategoryPage {
 		return this;
 	}
 
-	public SubCategoryPage save() {
+	public SubCategoryPage clickSaveButton() {
 		savebutton.click();
 		return this;
 	}
@@ -70,7 +70,7 @@ public class SubCategoryPage {
 		return alert.isDisplayed();
 	}
 
-	public SubCategoryPage delete() {
+	public SubCategoryPage clickdDeleteButton() {
 		deletebutton.click();
 		driver.switchTo().alert().accept();
 		return this;

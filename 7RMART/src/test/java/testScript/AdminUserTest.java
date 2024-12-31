@@ -27,7 +27,7 @@ public class AdminUserTest extends Base {
 		String password = ExcelUtility.getStringData(1, 1, "AdminUser");
 		String usertype = ExcelUtility.getStringData(1, 2, "AdminUser");
 		adminuserpage = homepage.adminMoreInfo1();
-		adminuserpage.create().username(username).password(password).userType(usertype).submit();
+		adminuserpage.createNewUser().enterUserName(username).enterPassword(password).enterUserType(usertype).clickSubmitButton();
 		Boolean isAlertDisplayed = adminuserpage.isAlertDisplayed();
 		Assert.assertTrue(isAlertDisplayed, Constants.CREATENEWUSER);
 

@@ -28,7 +28,7 @@ public class ManageFooterTextTest extends Base {
 		String phonenum = ExcelUtility.getIntegerData(1, 2, "FooterText");
 		managefootertextpage = homepage.footerMoreInfo();
 		String newaddress=fakerutility.getFakeFirstName();
-		managefootertextpage.updateInfo().address(newaddress).email(emailvalue).phone(phonenum).update();
+		managefootertextpage.updateInfo().address(newaddress).email(emailvalue).phone(phonenum).clickUpdateButton();
 		boolean alertCheck = managefootertextpage.isAlertDisplayed();
 		Assert.assertTrue(alertCheck, Constants.UPDATEFOOTERTEXT);
 	}
@@ -41,8 +41,7 @@ public class ManageFooterTextTest extends Base {
 		loginpage.enterUserName(usernamevalue).enterPassword(passwordvalue);
 		homepage = loginpage.signIn();
 		managefootertextpage = homepage.footerMoreInfo();
-		managefootertextpage.updateVisible();
-		boolean isActionButtonPresent = managefootertextpage.isAlertDisplayed();
+		boolean isActionButtonPresent = managefootertextpage.isUpdateVisible();
 		Assert.assertTrue(isActionButtonPresent, Constants.UPDATEVISIBLE);
 	}
 }

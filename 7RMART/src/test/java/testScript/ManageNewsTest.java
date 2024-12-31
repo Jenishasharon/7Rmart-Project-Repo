@@ -24,8 +24,8 @@ public class ManageNewsTest extends Base {
 		loginpage.enterUserName(usernamevalue).enterPassword(passwordvalue);
 		homepage = loginpage.signIn();
 		managenewspage = homepage.manage();
-		managenewspage.createNews().message(msg).saveMessage();
-		Boolean isNewsCreated = managenewspage.alert();
+		managenewspage.createNews().enterMessage(msg).saveMessage();
+		Boolean isNewsCreated = managenewspage.isAlertDisplayed();
 		Assert.assertTrue(isNewsCreated, Constants.CREATENEWS);
 	}
 }

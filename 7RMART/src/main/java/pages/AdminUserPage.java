@@ -29,29 +29,29 @@ public class AdminUserPage {
 	@FindBy(xpath = "//div[@class='alert alert-success alert-dismissible']")
 	private WebElement alertmessage;
 
-	public AdminUserPage create() {
+	public AdminUserPage createNewUser() {
 		WaitUtility waitutility = new WaitUtility();
 		waitutility.waitForElementToBeClickable(driver, newbutton);
 		newbutton.click();
 		return this;
 	}
 
-	public AdminUserPage username(String user) {
+	public AdminUserPage enterUserName(String user) {
 		usernamefield.sendKeys(user);
 		return this;
 	}
 
-	public AdminUserPage password(String pass) {
+	public AdminUserPage enterPassword(String pass) {
 		passwordfield.sendKeys(pass);
 		return this;
 	}
 
-	public AdminUserPage userType(String usertype) {
+	public AdminUserPage enterUserType(String usertype) {
 		usertypefield.sendKeys(usertype);
 		return this;
 	}
 
-	public AdminUserPage submit() {
+	public AdminUserPage clickSubmitButton() {
 		savebutton.click();
 		return this;
 	}

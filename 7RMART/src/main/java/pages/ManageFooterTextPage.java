@@ -49,7 +49,7 @@ public class ManageFooterTextPage {
 		return this;
 	}
 
-	public ManageFooterTextPage update() {
+	public ManageFooterTextPage clickUpdateButton() {
 		updatebutton.click();
 		return this;
 	}
@@ -58,12 +58,8 @@ public class ManageFooterTextPage {
 		return alertmessage.isDisplayed();
 	}
 
-	public ManageFooterTextPage updateVisible() {
-		if (update.isDisplayed()) {
-			System.out.println("Update button is visible");
-		} else {
-			System.out.println("Update button is not visible");
-		}
-		return this;
+	public boolean isUpdateVisible() {
+		return actionbutton.isDisplayed();
 	}
+	
 }

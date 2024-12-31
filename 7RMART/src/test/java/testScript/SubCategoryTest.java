@@ -26,7 +26,7 @@ public class SubCategoryTest extends Base {
 		loginpage.enterPassword(passwordvalue);
 		homepage = loginpage.signIn();
 		subcategorypage = homepage.subCategoryMoreInfo();
-		subcategorypage.newCategory().category().subCategory(subcategoryvalue).image().save();
+		subcategorypage.newCategory().category().subCategory(subcategoryvalue).image().clickSaveButton();
 		boolean alertCheck = subcategorypage.isAlertDisplayed();
 		Assert.assertTrue(alertCheck, Constants.CREATECATEGORY);
 	}
@@ -39,7 +39,7 @@ public class SubCategoryTest extends Base {
 		loginpage.enterUserName(usernamevalue).enterPassword(passwordvalue);
 		homepage = loginpage.signIn();
 		subcategorypage = homepage.subCategoryMoreInfo();
-		subcategorypage.delete();
+		subcategorypage.clickdDeleteButton();
 		boolean alertCheck = subcategorypage.isAlertDelete();
 		Assert.assertTrue(alertCheck, Constants.DELETECATEGORY);
 	}
