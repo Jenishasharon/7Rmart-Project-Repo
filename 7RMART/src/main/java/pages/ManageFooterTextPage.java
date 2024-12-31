@@ -34,17 +34,17 @@ public class ManageFooterTextPage {
 		return this;
 	}
 
-	public ManageFooterTextPage address(String adrs) {
+	public ManageFooterTextPage enterAddress(String adrs) {
 		addressfield.sendKeys(adrs);
 		return this;
 	}
 
-	public ManageFooterTextPage email(String emailadrs) {
+	public ManageFooterTextPage enterEmail(String emailadrs) {
 		emailfield.sendKeys(emailadrs);
 		return this;
 	}
 
-	public ManageFooterTextPage phone(CharSequence phonenum) {
+	public ManageFooterTextPage enterPhoneNumber(CharSequence phonenum) {
 		phonenumber.sendKeys(phonenum);
 		return this;
 	}
