@@ -12,12 +12,12 @@ public class WaitUtility {
 	public static final long EXPLICIT_WAIT = 10;
 
 	public void waitForElement(WebDriver driver, WebElement target) {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(EXPLICIT_WAIT));
 		wait.until(ExpectedConditions.visibilityOf(target));
 	}
 
 	public void waitForElementToBeClickable(WebDriver driver, WebElement element) {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(EXPLICIT_WAIT));
 		wait.until(ExpectedConditions.elementToBeClickable(element));
 	}
 
@@ -32,7 +32,7 @@ public class WaitUtility {
 	}
 
 	public void waitForClick(WebDriver driver, WebElement element) {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(EXPLICIT_WAIT));
 		wait.until(ExpectedConditions.elementToBeClickable(element));
 	}
 }

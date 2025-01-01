@@ -35,7 +35,7 @@ public class HomePage {
 	@FindBy(xpath = "//a[@href='https://groceryapp.uniqassosiates.com/admin/list-sub-category']")
 	private WebElement subcatmoreinfo;
 
-	public AdminUserPage adminMoreInfo1() {
+	public AdminUserPage adminMoreInfo() {
 		PageUtility pageutility = new PageUtility();
 		pageutility.jsExecuterClick(moreinfobutton, driver);
 		return new AdminUserPage(driver);
